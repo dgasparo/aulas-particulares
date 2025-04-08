@@ -11,13 +11,16 @@ class DatabaseManager:
         cursor = self.conn.cursor()
         try:
             cursor.execute('''
-                CREATE TABLE IF NOT EXISTS alunos (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    nome TEXT NOT NULL,
-                    telefone TEXT,
-                    email TEXT,
-                    materia TEXT,
-                    valor_aula REAL
+            CREATE TABLE IF NOT EXISTS alunos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nome TEXT NOT NULL,
+                responsavel TEXT NOT NULL,
+                telefone TEXT,
+                celular TEXT NOT NULL,
+                email TEXT,
+                materia TEXT,
+                valor_aula REAL,
+                observacoes TEXT
                 )
             ''')
             self.conn.commit()
