@@ -1,3 +1,5 @@
+# Sistema de Gestão de Aulas Particulares v1.0
+# Desenvolvido por Daniel
 import tkinter as tk
 from tkinter import ttk, messagebox
 import sqlite3
